@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+
+<h2>메뉴 수정</h2>
+<form action="/menu/<%= menu.id %>/update" method="POST">
+  이름: <input name="name" value="<%= menu.name %>" required><br>
+  가격: <input name="price" type="number" value="<%= menu.price %>" required><br>
+  분류: <input name="category" value="<%= menu.category %>"><br>
+  <button type="submit">수정</button>
+</form>
+<a href="/">목록으로</a>
+
+<%- include('partials/footer') %>

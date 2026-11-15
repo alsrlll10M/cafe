@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<a href="/new">+ 메뉴 추가</a>
+<table border="1" cellpadding="8">
+  <tr><th>ID</th><th>이름</th><th>가격</th><th>분류</th><th>관리</th></tr>
+  <% menus.forEach(m => { %>
+    <tr>
+      <td><%= m.id %></td>
+      <td><%= m.name %></td>
+      <td><%= m.price %></td>
+      <td><%= m.category %></td>
+      <td>
+        <a href="/menu/<%= m.id %>/edit">수정</a>
+        <form action="/menu/<%= m.id %>/delete" method="POST" style="display:inline">
+          <button type="submit">삭제</button>
+        </form>
+      </td>
+    </tr>
+  <% }) %>
+</table>
+
+<%- include('partials/footer') %>

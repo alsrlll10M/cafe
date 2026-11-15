@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+
+<h2>메뉴 추가</h2>
+<form action="/menu" method="POST">
+  이름: <input name="name" required><br>
+  가격: <input name="price" type="number" required><br>
+  분류: <input name="category"><br>
+  <button type="submit">추가</button>
+</form>
+<a href="/">목록으로</a>
+
+<%- include('partials/footer') %>
